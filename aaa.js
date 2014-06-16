@@ -67,6 +67,36 @@ if (Meteor.isServer) {
     if (Holdings.find().fetch().length <= 0) {
       Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
       Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
+      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
+      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
+      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
+      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
+      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
+      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
+      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
+      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
+      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
+      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
+      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
+      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
+      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
+      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
+      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
+      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
+      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
+      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
+      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
+      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
+      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
+      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
+      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
+      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
+      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
+      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
+      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
+      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
+      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
+      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
     }
   })
 }
