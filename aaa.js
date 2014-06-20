@@ -15,12 +15,19 @@ if (Meteor.isClient) {
             title: "symbol",
             data: "symbol"
           },{
+            title: "shares",
+            data: "shares"
+          },{
             title: "price",
             data: "price"
           }
         ],
         query: Session.get('portfolioFilter')
       };
+    },
+    showClosed: function() {
+      var filter = Session.get('portfolioFilter');
+      return filter && ! filter.shares;
     }
   });
 
@@ -40,10 +47,6 @@ if (Meteor.isClient) {
     },
     'click #display-amount': function(event, template) {
       Session.set('displayPercent', undefined);
-    },
-    showClosed: function() {
-      var filter = Session.get('portfolioFilter');
-      return filter && ! filter.shares;
     }
   });
 
@@ -65,38 +68,38 @@ if (Meteor.isServer) {
 
   Meteor.startup(function() {
     if (Holdings.find().fetch().length <= 0) {
-      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
-      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
-      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
-      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
-      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
-      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
-      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
-      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
-      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
-      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
-      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
-      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
-      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
-      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
-      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
-      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
-      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
-      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
-      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
-      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
-      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
-      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
-      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
-      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
-      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
-      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
-      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
-      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
-      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
-      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
-      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00});
-      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00});
+      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00, 'shares': 100});
+      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00, 'shares': 0});
+      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00, 'shares': 100});
+      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00, 'shares': 0});
+      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00, 'shares': 100});
+      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00, 'shares': 0});
+      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00, 'shares': 100});
+      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00, 'shares': 0});
+      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00, 'shares': 100});
+      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00, 'shares': 0});
+      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00, 'shares': 100});
+      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00, 'shares': 0});
+      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00, 'shares': 100});
+      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00, 'shares': 0});
+      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00, 'shares': 100});
+      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00, 'shares': 0});
+      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00, 'shares': 100});
+      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00, 'shares': 0});
+      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00, 'shares': 100});
+      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00, 'shares': 0});
+      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00, 'shares': 100});
+      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00, 'shares': 0});
+      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00, 'shares': 100});
+      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00, 'shares': 0});
+      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00, 'shares': 100});
+      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00, 'shares': 0});
+      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00, 'shares': 100});
+      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00, 'shares': 0});
+      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00, 'shares': 100});
+      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00, 'shares': 0});
+      Holdings.insert({'symbol': 'NAB.AX', 'price': 35.00, 'shares': 100});
+      Holdings.insert({'symbol': 'BHP.AX', 'price': 42.00, 'shares': 0});
     }
   })
 }
