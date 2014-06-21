@@ -6,11 +6,11 @@ if (Meteor.isClient) {
           // Move the display options inside the datatables header after it initialises
           fnInitComplete: function() {
             // $('#portfolio #display-options').detach();
-             $('#portfolio-table .datatable-header').prepend( $('#portfolio #display-options').detach() );
+             $('#portfolio .datatable-header').prepend( $('#portfolio #display-options').detach() );
           }
         },
         subscription: "holdings",
-        id: "portfolio-table",
+        id: 'portfolio-table',
         columns: [{
             title: "symbol",
             data: "symbol"
